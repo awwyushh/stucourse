@@ -1,0 +1,39 @@
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+*.out
+*.pid
+*.seed
+
+# Environment
+.env
+.env.*.local
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Coverage / testing
+coverage/
+.jest/
+
+# Docker
+*.pid
+docker-data/
