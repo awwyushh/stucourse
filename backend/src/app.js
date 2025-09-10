@@ -4,6 +4,8 @@ import studentRoutes from "./routes/studentRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
 import enrollmentRoutes from "./routes/enrollmentRoutes.js";
 import dotenv from "dotenv"
+import { swaggerUi, swaggerSpec } from "./swagger.js";
+
 
 dotenv.config();
 
@@ -12,6 +14,7 @@ const PORT = process.env.PORT || 5000
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/students", studentRoutes);
 app.use("/courses", courseRoutes);
