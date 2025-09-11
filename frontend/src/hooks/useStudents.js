@@ -14,3 +14,11 @@ export const useAddStudent = () => {
     onSuccess: () => qc.invalidateQueries(["students"]),
   });
 };
+
+export const useDeleteStudent = () => {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (id) => api.delete(`/students/${id}`),
+    onSuccess: () => qc.invalidateQueries(["students"]),
+  });
+};
